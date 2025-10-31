@@ -29,6 +29,6 @@ jobs:
           context: .
           push: true
           # 使用 commit hash 作为唯一的版本标签
-          tags: ghcr.io/breeze1203:${{ github.sha }}
+          tags: ghcr.io/${{ toLower(github.repository_owner) }}:${{ github.sha }}
           # 同时打一个 "latest" 标签
           labels: "version=${{ github.sha }}"
