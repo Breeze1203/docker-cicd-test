@@ -9,9 +9,7 @@ app.get('/', (req, res) => {
   console.log(`[${VERSION}] Request received!`);
   res.send(`Hello from ${VERSION}`);
 });
-// 故意制造的 BUG
-console.log("Trying to start v2.0...");
-throw new Error("FATAL ERROR: Database connection failed!");
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT} with ${VERSION}`);
